@@ -7,7 +7,7 @@ router.get('/', function(req, res){
 
 
 router.get('/fruit', function(req, res){
-   res.sendFile(__dirname + './public/index.html');
+   res.sendFile(__dirname + '/public/index.html');
 });
 router.post('/fruit', function(req, res){
    res.send('POST Fruits');
