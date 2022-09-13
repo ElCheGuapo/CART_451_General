@@ -1,24 +1,27 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res){
-    res.send('GET route index');
+router.get('/index', function(req, res){
+    res.sendFile(__dirname + '/public/html/index.html');
+});
+router.post('/index', function(req, res){
+    res.send('POST index');
+ });
+
+
+router.get('/about', function(req, res){
+   res.sendFile(__dirname + '/public/html/about.html');
+});
+router.post('/about', function(req, res){
+   res.send('POST about');
 });
 
 
-router.get('/fruit', function(req, res){
-   res.sendFile(__dirname + '/public/index.html');
+router.get('/main', function(req, res){
+    res.sendFile(__dirname + '/public/html/main.html');
 });
-router.post('/fruit', function(req, res){
-   res.send('POST Fruits');
-});
-
-
-router.get('/veg', function(req, res){
-    res.send('GET Veggies');
-});
-router.post('/veg', function(req, res){
-    res.send('POST Veggies');
+router.post('/main', function(req, res){
+    res.send('POST main');
 });
 
 //export this router to use in our index.js
