@@ -6,8 +6,14 @@ router.get('/index', function(req, res){
 });
 router.post('/index', function(req, res){
     res.send('POST index');
- });
+});
 
+router.get('/weeklyresponses', function(req, res){
+    res.sendFile(__dirname + '/public/html/WeeklyResponses.html');
+});
+router.post('/weeklyresponses', function(req, res){
+    res.send('POST weekly responses');
+});
 
 router.get('/about', function(req, res){
    res.sendFile(__dirname + '/public/html/about.html');
@@ -15,7 +21,6 @@ router.get('/about', function(req, res){
 router.post('/about', function(req, res){
    res.send('POST about');
 });
-
 
 router.get('/main', function(req, res){
     res.sendFile(__dirname + '/public/html/main.html');
