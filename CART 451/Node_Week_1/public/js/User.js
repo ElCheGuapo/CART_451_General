@@ -1,7 +1,12 @@
 class User {
-    constructor(user_name, chat_count, profile_pic) {
+    constructor(user_name, chat_count, lvl) {
         this.user_name = user_name;
         this.chat_count = chat_count;
-        this.profile_pic = profile_pic;
+        this.lvl = lvl;
+        this.pos = createVector(width/2, height/2);
+    }
+
+    move() {
+
     }
 }
